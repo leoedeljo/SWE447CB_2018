@@ -9,12 +9,12 @@
   
   attribute vec4 vPosition;
 
-  void main() 
+  void coneVertexShader() 
   {
       gl_Position = vPosition;
   }
   
-  void main()
+  void coneFragmentShader()
   {
       gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
   }
