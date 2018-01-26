@@ -7,17 +7,22 @@
   <script src="../Common/Cone.js"></script>
   <script src="cone.js"></script>
   
+  <script id="cone-vertex-shader" type="x-shader/x-vertex">
   attribute vec4 vPosition;
 
-  void coneVertexShader() 
+  void main() 
   {
       gl_Position = vPosition;
   }
+  </script>
   
-  void coneFragmentShader()
+  <script id="fragment-shader" type="x-shader/x-fragment"> 
+
+  void main()
   {
       gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
   }
+  </script>
   
 </head>
 <body>
