@@ -18,14 +18,20 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     this.positions = { 
         values : new Float32Array([
-           // Add your list vertex positions here
+           0.0, 0.0, 0.0, // V0
+           1.0, 0.0, 0.0, // V1
+           1.0, 1.0, 0.0, // V2
+           0.0, 1.0, 0.0, // V3
+           1.0, 0.0, 1.0, // V4
+           1.0, 1.0, 1.0, // V5
+           0.0, 1.0, 1.0  // V6
             ]),
         numComponents : 3
     };
     
     this.indices = { 
         values : new Uint16Array([
-            // Add your list of triangle indices here
+            0, 1, 2, 4, 5, 6, 3
         ])
     };
     this.indices.count = this.indices.values.length;
