@@ -25,7 +25,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
            1.0, 0.0, 1.0, // V4
            1.0, 1.0, 1.0, // V5
            0.0, 1.0, 1.0  // V6
-	   //0.0, 0.0, 1.0  // V7
+	   0.0, 0.0, 1.0  // V7
             ]),
         numComponents : 3
     };
@@ -38,12 +38,12 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 	    2, 5, 6,
 	    6, 3, 2,
 	    2, 3, 0,
-	    //0, 3, 6,
-	    //6, 7, 0,
-	    //0, 7, 1,
-            //1, 7, 4,
-	    //4, 7, 6,
-	   // 6, 5, 4
+	    0, 3, 6,
+	    6, 7, 0,
+	    0, 7, 1,
+            1, 7, 4,
+	    4, 7, 6,
+	    6, 5, 4
         ])
     };
     this.indices.count = this.indices.values.length;
