@@ -24,7 +24,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
            0.0, 1.0, 0.0, // V3
            1.0, 0.0, 1.0, // V4
            1.0, 1.0, 1.0, // V5
-           0.0, 1.0, 1.0  // V6
+           0.0, 1.0, 1.0,  // V6
 	   0.0, 0.0, 1.0  // V7
             ]),
         numComponents : 3
