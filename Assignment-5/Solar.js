@@ -127,7 +127,7 @@ function render() {
   // "planet" variable is set for each object, you will need to set this
   // for each planet separately.
 
-  planet.PointMode = false;
+  planet.PointMode = true;
 
   // Use the matrix stack to configure and render a planet.  How you rener
   // each planet will be similar, but not exactly the same.  In particular,
@@ -150,6 +150,8 @@ function render() {
   name1 = "Earth";
   planet = Planets[name1];
   data = SolarSystem[name1];
+  
+  planet.PointMode = true;
   
   ms.push();
   ms.rotate(planet.year, [0, 1, 0]);
