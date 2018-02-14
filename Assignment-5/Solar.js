@@ -18,7 +18,7 @@ var gl;
 
 var Planets = {
   Sun : undefined,
-  // Mercury : undefined,
+  Mercury : undefined,
   // Venus : undefined,
   // Earth : undefined,
   // Moon : undefined,
@@ -115,7 +115,7 @@ function render() {
   // about the planets in SolarSystem.  Look at how these are
   // used; it'll simplify the work you need to do.
 
-  var name, planet, data;
+  var name, planet, data, name1;
 
   name = "Sun";
   planet = Planets[name];
@@ -146,7 +146,20 @@ function render() {
   //
   //  Add your code for more planets here!
   //
-
+  
+  name1 = "Mercury";
+  planet = Planets[name1];
+  data = SolarSystem[name1];
+  
+  ms.push();
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
   window.requestAnimationFrame(render);
 }
 
