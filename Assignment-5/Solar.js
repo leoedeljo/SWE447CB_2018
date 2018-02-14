@@ -147,9 +147,9 @@ function render() {
   //  Add your code for more planets here!
   //
   
-  //name1 = "Earth";
-  //planet = Planets[name1];
-  //data = SolarSystem[name1];
+  name1 = "Earth";
+  planet = Planets[name1];
+  data = SolarSystem[name1];
   
   // planet.PointMode = false;
   
