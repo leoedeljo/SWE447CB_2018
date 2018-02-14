@@ -18,9 +18,9 @@ var gl;
 
 var Planets = {
   Sun : undefined,
-  Mercury : undefined,
+  // Mercury : undefined,
   // Venus : undefined,
-  // Earth : undefined,
+  Earth : undefined,
   // Moon : undefined,
   // Mars : undefined,
   // Jupiter : undefined,
@@ -147,16 +147,15 @@ function render() {
   //  Add your code for more planets here!
   //
   
-  name1 = "Mercury";
+  name1 = "Earth";
   planet = Planets[name1];
   data = SolarSystem[name1];
   
   ms.push();
-  ms.scale(data.radius);
-  gl.useProgram(planet.program);
-  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
-  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
-  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  ms.rotate(planet.year, [0, 1, 0]);
+  ms.translate(planet.distance, 0, 0);
+  ms.rotate(planet.day, [0, 1, 0]);
+  ms.scale(planet.radius);
   planet.render();
   ms.pop();
   
