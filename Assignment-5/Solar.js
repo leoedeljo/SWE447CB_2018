@@ -23,7 +23,7 @@ var Planets = {
   Earth : undefined,
   // Moon : undefined,
   // Mars : undefined,
-  // Jupiter : undefined,
+  Jupiter : undefined,
   // Saturn : undefined,
   // Uranus : undefined,
   // Neptune : undefined,
@@ -115,7 +115,7 @@ function render() {
   // about the planets in SolarSystem.  Look at how these are
   // used; it'll simplify the work you need to do.
 
-  var name, planet, data, name1;
+  var name, planet, data, name1, name2;
 
   name = "Sun";
   planet = Planets[name];
@@ -150,6 +150,24 @@ function render() {
   name1 = "Earth";
   planet = Planets[name1];
   data = SolarSystem[name1];
+  
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(data.year, [0, 1, 0]);
+  ms.translate(data.distance, 0, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  
+  name2 = "Jupiter";
+  planet = Planets[name2];
+  data = SolarSystem[name2];
   
   planet.PointMode = false;
   
