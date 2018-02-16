@@ -168,7 +168,6 @@ function render() {
   planet = Planets[name2];
   data = SolarSystem[name2];
   
-  ms.rotate(data.year*time, [0, 0, 1]);
   ms.translate(data.distance, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
