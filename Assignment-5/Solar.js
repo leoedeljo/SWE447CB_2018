@@ -154,7 +154,7 @@ function render() {
   planet.PointMode = false;
   
   ms.push();
-  ms.rotate(data.year*time, [0, 0, 1]);
+  ms.rotate((1/data.year)*time, [0, 0, 1]);
   ms.translate(data.distance, 0, 0);
   ms.push();
   ms.scale(data.radius);
@@ -189,7 +189,7 @@ function render() {
   planet.PointMode = false;
   
   ms.push();
-  ms.rotate(data.year*time, [0, 0, 1]);
+  ms.rotate((1/data.year)*time, [0, 0, 1]);
   ms.translate(data.distance, 0, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
