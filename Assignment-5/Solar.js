@@ -27,7 +27,7 @@ var Planets = {
   Saturn : undefined,
   Uranus : undefined,
   Neptune : undefined,
-  // Pluto : undefined
+  Pluto : undefined
 };
 
 // Viewing transformation parameters
@@ -115,7 +115,7 @@ function render() {
   // about the planets in SolarSystem.  Look at how these are
   // used; it'll simplify the work you need to do.
 
-  var name, planet, data, name1, name2, name3, name4, name5, name6, name7, name8, name9;
+  var name, planet, data, name1, name2, name3, name4, name5, name6, name7, name8, name9, name10;
 
   name = "Sun";
   planet = Planets[name];
@@ -298,6 +298,25 @@ function render() {
   name9 = "Neptune";
   planet = Planets[name9];
   data = SolarSystem[name9];
+  
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate((1/data.year)*time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  
+  
+  name10 = "Pluto";
+  planet = Planets[name10];
+  data = SolarSystem[name10];
   
   planet.PointMode = false;
   
