@@ -13,7 +13,7 @@ var SolarSystem = {
   },
   Venus : {
     radius : 5,
-    distance : 35,
+    distance : 32,
     year : 0.615,
     color : [ 1.0, 0.0, 1.0, 1.0 ]
   },
