@@ -55,13 +55,13 @@ var SolarSystem = {
   },
   Neptune : {
     radius : 7,
-    distance : 240,
+    distance : 270,
     year : 163.7,
     color : [ 0.0, 0.0, 1.0, 1.0 ]
   },
   Pluto : {
     radius : 3,
-    distance : 280,
+    distance : 310,
     year : 247.9,
     color : [ 150/255, 75/255, 0.0, 1.0 ]
   }
