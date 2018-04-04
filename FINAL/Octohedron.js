@@ -29,14 +29,14 @@ function Octohedron( vertexShaderId, fragmentShaderId ) {
     
     this.indices = { 
         values : new Uint16Array([
-            1, 2, 5,
-            5, 2, 3,
-            3, 4, 5,
-            5, 4, 1,
-            1, 4, 6,
-            6, 2, 1,
-            2, 6, 3,
-            3, 6, 4
+            0, 1, 4,
+            4, 1, 2,
+            2, 3, 4,
+            4, 3, 0,
+            0, 3, 5,
+            5, 1, 0,
+            1, 5, 2,
+            2, 5, 3
         ])
     };
     this.indices.count = this.indices.values.length;
