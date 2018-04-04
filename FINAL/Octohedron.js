@@ -3,8 +3,8 @@ function Octohedron( vertexShaderId, fragmentShaderId ) {
     // Initialize the shader pipeline for this object using either shader ids
     //   declared in the application's HTML header, or use the default names.
     //
-    var vertShdr = vertexShaderId || "Cube-vertex-shader";
-    var fragShdr = fragmentShaderId || "Cube-fragment-shader";
+    var vertShdr = vertexShaderId || "Octohedron-vertex-shader";
+    var fragShdr = fragmentShaderId || "Octohedron-fragment-shader";
 
     this.program = initShaders(gl, vertShdr, fragShdr);
 
