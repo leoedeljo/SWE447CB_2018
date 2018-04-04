@@ -25,7 +25,7 @@ function render() {
 
   angle += 2.0; // degrees
 
-  octo.MV = rotate( angle, [1, 1, 0] );
+  octo.MV = rotate( angle, [0, 1, 0] );
 
   octo.render();
 
