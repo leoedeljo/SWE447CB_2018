@@ -68,7 +68,6 @@ function Octohedron( vertexShaderId, fragmentShaderId ) {
 
         gl.uniformMatrix4fv( MVLoc, gl.FALSE, flatten(this.MV) );
 
-        // Draw the cube's base
         gl.drawElements( gl.TRIANGLES, this.indices.count, gl.UNSIGNED_SHORT, 0 );
     }
 };
