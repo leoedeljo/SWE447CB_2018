@@ -17,12 +17,12 @@ function Octohedron( vertexShaderId, fragmentShaderId ) {
 
     this.positions = { 
         values : new Float32Array([
-           0, 0, 0, // V0
-           0.25, 0, 0.25, // V1
-           0, 0, 0.5, // V2
-           -0.25, 0, 0.25, // V3
-           0, 0.5, 0.25, // V4
-           0, -0.5, 0.25 // V5
+           0, 0, -.25, // V0
+           0.25, 0, 0, // V1
+           0, 0, 0.25, // V2
+           -0.25, 0, 0, // V3
+           0, 0.5, 0, // V4
+           0, -0.5, 0 // V5
             ]),
         numComponents : 3
     };
